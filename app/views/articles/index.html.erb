@@ -1,0 +1,21 @@
+<!-- <h1>Articles#index</h1>
+<p>Find me in app/views/articles/index.html.erb</p>
+ -->
+
+<h1>Articles</h1>
+
+<h3 class="text-center" id="link-write-article"><%= link_to "Write an article", new_article_path %></h3>
+<ul>
+  <% @articles.each do |a| %>
+  <li>
+  <h4><%= a.title %></h4> <p> <%= a.content %></p>
+    <%= link_to article_path(a) do %>
+      <p><%= a.title %></p>
+
+    <% end %>
+
+  </li>
+  <% end %>
+</ul>
+
+
